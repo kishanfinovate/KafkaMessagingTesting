@@ -16,6 +16,7 @@ public class KafkaTestingController {
 	
 	@GetMapping("/ping")
 	public String ping(HttpServletRequest request) throws Exception {
+		System.out.println("Entry in ping api");
 		kafkaProducerService.produceMessageTesting();
 		return "Success";
 	}
